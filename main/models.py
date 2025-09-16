@@ -5,12 +5,13 @@ import uuid
 
 class Product(models.Model):
     CATEGORY_CHOICES = [
-        ('transfer', 'Transfer'),
-        ('update', 'Update'),
+        ('forward', 'Forward'),
+        ('midfield', 'Midfield'),
+        ('centerback', 'Centerback'),
+        ('fullback', 'Fullback'),
+        ('goalkeeper', 'Goalkeeper'),
+        ('manager', 'Manager'),
         ('exclusive', 'Exclusive'),
-        ('match', 'Match'),
-        ('rumor', 'Rumor'),
-        ('analysis', 'Analysis'),
     ]
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -19,16 +20,12 @@ class Product(models.Model):
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='update')
     thumbnail = models.URLField(blank=True, null=True)
     is_featured = models.BooleanField(default=False)
-    price = models.IntegerField()
-    category = models.CharField()
+    price = models.IntegerField(null=True, blank=True, default=0)
+    category = models.CharField(choices=CATEGORY_CHOICES)
     
     def __str__(self):
         return self.title
     
-    @property
-    def is_news_hot(self):
-        return self.news_views > 20
+
+
         
-    def increment_views(self):
-        self.news_views += 1
-        self.save()

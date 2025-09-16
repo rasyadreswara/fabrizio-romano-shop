@@ -57,6 +57,18 @@ Untuk menampilkan data di halaman HTML Django, cukup impor fungsi render di view
 5. Melakukan deployment ke PWS terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
 Untuk melakukan deployment ke PWS, perlu kita setup di website PWS pacil secara langsung, kemudian kita run git push pws master di terminal.
 
+TUGAS 3
+1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform? :
+Data delivery adalah cara data dikemas, dikirim, dan dikonsumsi antar komponen (frontend-backend, dll.). Tanpa data delivery yang rapi, platform akan macet.
+
+2. Menurutmu, mana yang lebih baik antara XML dan JSON? Mengapa JSON lebih populer dibandingkan XML? :
+JSON, karena sintaksnya lebih sederhana, dan lebih ringan ringkas.
+
+3. Jelaskan fungsi dari method is_valid() pada form Django dan mengapa kita membutuhkan method tersebut? :
+Untuk mencegah data tidak valid/berbahaya masuk DB.
+
+4. Mengapa kita membutuhkan csrf_token saat membuat form di Django? Apa yang dapat terjadi jika kita tidak menambahkan csrf_token pada form Django? Bagaimana hal tersebut dapat dimanfaatkan oleh penyerang? :
+csrf_token digunakan sebagai perlindungan terhadap CSRF, yaitu serangan di mana penyerang membuat browser korban, yang sedang login di situs, mengirimkan request berbahaya ke situs tanpa sepengatahuan korban (misalnya ganti password)
 
 
 
