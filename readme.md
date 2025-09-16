@@ -3,6 +3,7 @@ https://pbp.cs.ui.ac.id/favian.muhammad41/fabrizio-romano-shop
 
 https://github.com/rasyadreswara/fabrizio-romano-shop.git
 
+TUGAS 2
 Jelaskan peran settings.py dalam proyek Django! :
 settings.py adalah "papan kontrol" utama proyek. Di file inilah kita menyimpan semua konfigurasi penting, misalnya INSTALLED_APPS, allowed hosts, dll.
 
@@ -56,7 +57,7 @@ Untuk menampilkan data di halaman HTML Django, cukup impor fungsi render di view
 
 5. Melakukan deployment ke PWS terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
 Untuk melakukan deployment ke PWS, perlu kita setup di website PWS pacil secara langsung, kemudian kita run git push pws master di terminal.
-
+---------------------------------------------------------------
 TUGAS 3
 1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform? :
 Data delivery adalah cara data dikemas, dikirim, dan dikonsumsi antar komponen (frontend-backend, dll.). Tanpa data delivery yang rapi, platform akan macet.
@@ -70,7 +71,11 @@ Untuk mencegah data tidak valid/berbahaya masuk DB.
 4. Mengapa kita membutuhkan csrf_token saat membuat form di Django? Apa yang dapat terjadi jika kita tidak menambahkan csrf_token pada form Django? Bagaimana hal tersebut dapat dimanfaatkan oleh penyerang? :
 csrf_token digunakan sebagai perlindungan terhadap CSRF, yaitu serangan di mana penyerang membuat browser korban, yang sedang login di situs, mengirimkan request berbahaya ke situs tanpa sepengatahuan korban (misalnya ganti password)
 
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial). :
 
+1. Pertama yang kita lakukan adalah membuat form input data sehingga nantinya bisa digunakan untuk menambah produk, kita lakukan ini dengan membuat class baru pada forms.py yaitu class ProductForm, class ini akan menerima data untuk product yang akan ditambahkan seperti nama, deskripsi, dan kategorinya. Kemudian kita akan buat 2 fungsi baru pada views.py yaitu create_product dan show_product. create_product akan menghasilkan form yang menambahkan data product secara otomatis ketika data disubmit ke dalam form, show_product akan mengambil objek dari produk, jika objek tersebut tidak ditemukan maka akan dikembalikan 404. Setelah membuat fungsi baru, buka urls.py pada main dan import fungsi yang sudah dibuat. Buka main.html pada templates dan update kode sehingga dibuat tombol baru yaitu "Add Product". Buat dua file baru yaitu create_product.html dan product_detail.html, create_product.html akan berfungsi sebagai penampil form yang sudah dibuat pada forms.py, dan product_detail.html akan berfungsi sebagai penampung data atau detail dari product tersebut. 
+2. Kedua yang kita lakukan adalah membuat 4 fungsi yaitu, show_xml, show_json, show_xml_by_id, show_json_by_id. Keempat fungsi ini umumnya, menurut pengetahuan saya, memiliki fungsi yaitu mengembalikan data. Perbedaan dari show_xml/json dengan show_xml/json_by_id adalah show_xml/json akan mengembalikan seluruh data menurut format masing masing, sedangkan show_xml/json_by_id akan mengembalikan sebuah data spesifik.
+3. Ketiga dan final step yang perlu dilakukan adalah penggunaan postman. Postman akan digunakan sebagai tempat melihat dan mengeksplor data yang dikembalikan dari endpoint (show_json, show_xml, and etc.) Dengan postman sebagai data viewer, kita dapat dengan mudah mencari/memvalidasi data.
 
 
 
