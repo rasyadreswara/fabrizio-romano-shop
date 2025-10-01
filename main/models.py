@@ -6,12 +6,10 @@ import uuid
 
 class Product(models.Model):
     CATEGORY_CHOICES = [
-        ('forward', 'Forward'),
-        ('midfield', 'Midfield'),
-        ('centerback', 'Centerback'),
-        ('fullback', 'Fullback'),
-        ('goalkeeper', 'Goalkeeper'),
-        ('manager', 'Manager'),
+        ('player_card', 'Player Card'),
+        ('Kits', 'kits'),
+        ('shoes', 'Shoes'),
+        ('footballs', 'Footballs'),
         ('exclusive', 'Exclusive'),
     ]
     
