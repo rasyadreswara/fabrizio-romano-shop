@@ -77,6 +77,15 @@ csrf_token digunakan sebagai perlindungan terhadap CSRF, yaitu serangan di mana 
 2. Kedua yang kita lakukan adalah membuat 4 fungsi yaitu, show_xml, show_json, show_xml_by_id, show_json_by_id. Keempat fungsi ini umumnya, menurut pengetahuan saya, memiliki fungsi yaitu mengembalikan data. Perbedaan dari show_xml/json dengan show_xml/json_by_id adalah show_xml/json akan mengembalikan seluruh data menurut format masing masing, sedangkan show_xml/json_by_id akan mengembalikan sebuah data spesifik.
 3. Ketiga dan final step yang perlu dilakukan adalah penggunaan postman. Postman akan digunakan sebagai tempat melihat dan mengeksplor data yang dikembalikan dari endpoint (show_json, show_xml, and etc.) Dengan postman sebagai data viewer, kita dapat dengan mudah mencari/memvalidasi data.
 
+TUGAS 5
+Prioritas CSS mengikuti urutan: !important paling tinggi, lalu inline style, lalu selector ID, kemudian class/attribute/pseudo-class, lalu tag/pseudo-element; jika tingkatnya sama maka aturan yang ditulis paling akhir menang, dan sebagian properti bisa diwariskan.
+
+Responsive design penting karena tampilan harus nyaman di berbagai ukuran layar, meningkatkan UX dan SEO, serta menghemat biaya perawatan satu basis kode; contoh yang sudah responsif: portal berita atau dokumentasi modern (layout berubah mulus di ponsel), sedangkan situs lama berlebar tetap 960px yang butuh zoom adalah contoh yang belum responsif.
+
+Margin adalah jarak di luar border, border adalah garis pembatas elemen, dan padding adalah jarak di dalam border mengelilingi konten; ketiganya diatur dengan properti margin, border, dan padding (bisa per sisi seperti -top/-right/-bottom/-left).
+
+Flexbox adalah tata letak satu dimensi (baris ATAU kolom) yang cocok untuk navbar, alignment, dan deret tombol; Grid adalah tata letak dua dimensi (baris DAN kolom) yang ideal untuk kerangka halaman atau galeri, gunakan Flexbox untuk merapikan sebaris/sekolom, dan Grid saat butuh kontrol area/layout yang kompleks.
+
 
 
 
